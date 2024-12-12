@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Web Scraper</title>
+</head>
+<body>
+    <h1>Flask Web Scraper</h1>
+    <form method="POST">
+        <label for="url">Enter a URL to scrape:</label><br>
+        <input type="url" id="url" name="url" placeholder="https://example.com" required><br><br>
+        <button type="submit">Scrape</button>
+    </form>
+
+    {% if links %}
+        <h2>Links found on {{ url }}:</h2>
+        <ul>
+            {% for link in links %}
+                <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+            {% endfor %}
+        </ul>
+    {% elif error %}
+        <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
