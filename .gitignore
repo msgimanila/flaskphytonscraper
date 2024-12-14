@@ -1,4 +1,5 @@
-__pycache__/
-*.pyc
-env/
-.vscode/
+__pycache__/   # Excludes the Python bytecode cache directory generated during execution.
+*.pyc          # Excludes all compiled Python files with the `.pyc` extension.
+env/           # Excludes the virtual environment folder named `env/`.
+.vscode/       # Excludes settings and configurations specific to Visual Studio Code.
+.env           # Excludes your `.env` file containing sensitive environment variables.
